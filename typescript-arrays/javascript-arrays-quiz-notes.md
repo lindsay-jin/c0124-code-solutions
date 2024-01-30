@@ -8,10 +8,10 @@ Answer the following questions in the provided markdown file before turning in t
   It is used to store ordered collections of data.
 
 - Describe array literal notation.
-  It uses square brackets.
+  It uses square brackets separated by commas.
 
 - How are arrays different from "plain" objects?
-  arrays store an ordered collection and objects do not.
+  arrays are indexed numerically and objects are not.
 
 - What number represents the first index of an array?
   zero
@@ -20,7 +20,7 @@ Answer the following questions in the provided markdown file before turning in t
   It gives you the total number of elements in the array.
 
 - How do you calculate the last index of an array?
-  array[length-1]
+  length-1
 
 ## Notes
 
