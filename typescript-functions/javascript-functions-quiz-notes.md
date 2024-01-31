@@ -5,7 +5,7 @@
 Answer the following questions in the provided markdown file before turning in this exercise:
 
 - What is a function in JavaScript?
-  an object with a code block that can be run when called.
+  an object with a code block that can be run when called and can be reused over and over again.
 
 - Describe the parts of a function **definition**.
   It starts with the function keyword, with an optional name, a comma-separated list of zero or more parameters surrounded by parenthesis, code block inside curly brace with an optional return statement.
@@ -20,6 +20,7 @@ Answer the following questions in the provided markdown file before turning in t
   when we define a function we declare parameters and when we call a function we pass it arguments.
 
 - Why are function **parameters** useful?
+  allows us to pass data into our functions
   parameters act like placeholders whose value are not known until we call the function and pass an argument.
 
 - What two effects does a `return` statement have on the behavior of a function?
