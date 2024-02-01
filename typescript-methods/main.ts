@@ -3,7 +3,7 @@ const heroes: string[] = ['Batman', 'Superman', 'Spiderman', 'Iron man'];
 let randomNumber: number = Math.random();
 // console.log(randomNumber);
 
-randomNumber *= heroes.length; // type??
+randomNumber *= heroes.length;
 const randomIndex: number = Math.floor(randomNumber);
 console.log('randomIndex:', randomIndex);
 
@@ -18,11 +18,10 @@ const library = [
   { title: 'Brave New World', author: 'Aldous Huxley' },
 ];
 
-const lastBook = library.pop(); // type?
+const lastBook = library.pop();
 console.log('lastBook:', lastBook);
-// console.log(library); why css and js only?
 
-const firstBook = library.shift(); // type?
+const firstBook = library.shift();
 console.log('firstBook:', firstBook);
 
 const js = {
