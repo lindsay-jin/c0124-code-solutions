@@ -32,8 +32,7 @@ Answer the following questions in the provided markdown file before turning in t
   split() method will split a string into an array of substrings based on a specified delimiter.
 
 - Do string methods change the original string? How would you check if you weren't sure?
-  sometimes. The original string remains unchanged when split() method is used on a string,
-  but in other times such as pop() will change the original string.
+  no. The original string remains unchanged.
   you can console.log() the original string to check
 
 - Roughly how many string methods are there according to the MDN Web docs?
@@ -44,7 +43,7 @@ Answer the following questions in the provided markdown file before turning in t
   Any code comes after a return statement stops running
 
 - Roughly how many array methods are there according to the MDN Web docs?
-  30
+  40
 
 - How do you get a collection of an objects keys?
   Object.keys(objectName)
