@@ -9,7 +9,7 @@
             introduceWarnerBro,
             recommendMovie
  */
-//1.
+// 1.
 // function isUnderFive(number: number){
 //   if(number<5){
 //     console.log(true);
@@ -20,7 +20,7 @@
 function isUnderFive(number) {
   return number < 5;
 }
-//2.
+// 2.
 function isEven(number) {
   if (number % 2 === 0) {
     return true;
@@ -28,7 +28,7 @@ function isEven(number) {
     return false;
   }
 }
-//3.
+// 3.
 function startsWithJ(string) {
   if (string[0] === 'J') {
     return true;
@@ -36,7 +36,7 @@ function startsWithJ(string) {
     return false;
   }
 }
-//4.
+// 4.
 function isOldEnoughToDrink(person) {
   if (person.age >= 21) {
     return true;
@@ -44,7 +44,7 @@ function isOldEnoughToDrink(person) {
     return false;
   }
 }
-//5.
+// 5.
 function isOldEnoughToDrive(person) {
   if (person.age >= 16) {
     return true;
@@ -52,7 +52,7 @@ function isOldEnoughToDrive(person) {
     return false;
   }
 }
-//6.
+// 6.
 function isOldEnoughToDrinkAndDrive(person) {
   if (person.age >= 16 && person.age >= 21) {
     return false;
@@ -60,7 +60,7 @@ function isOldEnoughToDrinkAndDrive(person) {
     return false;
   }
 }
-//7.
+// 7.
 function categorizeAcidity(pH) {
   if (pH > 0 && pH < 7) {
     return 'The substance is an acid.';
@@ -72,41 +72,33 @@ function categorizeAcidity(pH) {
     return 'Invalid pH level';
   }
 }
-//8.
+// 8.
 function introduceWarnerBro(name) {
   switch (name) {
     case 'yakko':
     case 'wakko':
       return `We're the warner brothers!`;
-      break;
     case 'dot':
       return `I'm cute~`;
-      break;
     default:
       return 'Goodnight everybody!';
   }
 }
-//9.
+// 9.
 function recommendMovie(genre) {
   switch (genre) {
     case 'action':
       return 'Die hard';
-      break;
     case 'comedy':
       return 'The Big Lebowski';
-      break;
     case 'horror':
       return 'The ring';
-      break;
     case 'drama':
       return 'Les Miserables';
-      break;
     case 'musical':
       return 'Moulin Rouge';
-      break;
     case 'sci-fi':
       return 'Dune';
-      break;
     default:
       return 'Genre not recognized. Choose between action, comedy, horror, drama, musical, or sci-fi';
   }

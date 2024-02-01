@@ -88,10 +88,8 @@ function introduceWarnerBro(name: string): string {
     case 'yakko':
     case 'wakko':
       return `We're the warner brothers!`;
-      break;
     case 'dot':
       return `I'm cute~`;
-      break;
     default:
       return 'Goodnight everybody!';
   }
@@ -102,22 +100,16 @@ function recommendMovie(genre: string): string {
   switch (genre) {
     case 'action':
       return 'Die hard';
-      break;
     case 'comedy':
       return 'The Big Lebowski';
-      break;
     case 'horror':
       return 'The ring';
-      break;
     case 'drama':
       return 'Les Miserables';
-      break;
     case 'musical':
       return 'Moulin Rouge';
-      break;
     case 'sci-fi':
       return 'Dune';
-      break;
     default:
       return 'Genre not recognized. Choose between action, comedy, horror, drama, musical, or sci-fi';
   }
