@@ -11,7 +11,7 @@ Answer the following questions in the provided markdown file before turning in t
   a method is a function which is a property of an object.
 
 - How is a method different from any other function?
-  methods are called on objects...
+  a method is a function associated with an object. It is defined as a property of an object and can be called on that object. A function is a standalone code block that is defined independently of objects.
 
 - How do you remove the last element from an array?
   pop() method
@@ -32,15 +32,19 @@ Answer the following questions in the provided markdown file before turning in t
   split() method will split a string into an array of substrings based on a specified delimiter.
 
 - Do string methods change the original string? How would you check if you weren't sure?
-  sometimes. The original string remains unchanged when split() method is used on a string.
+  sometimes. The original string remains unchanged when split() method is used on a string,
+  but in other times such as pop() will change the original string.
   you can console.log() the original string to check
 
 - Roughly how many string methods are there according to the MDN Web docs?
+  55
 
 - Is the return value of a function or method useful in every situation?
+  return values provide results or data such as a calculation or a boolean result.
   Any code comes after a return statement stops running
 
 - Roughly how many array methods are there according to the MDN Web docs?
+  30
 
 - How do you get a collection of an objects keys?
   Object.keys(objectName)
@@ -52,6 +56,7 @@ Answer the following questions in the provided markdown file before turning in t
   Object.entries(objectName)
 
 - What three-letter acronym should you always include in your Google search about a JavaScript method or CSS property?
+  MDN
 
 ## Notes
 
