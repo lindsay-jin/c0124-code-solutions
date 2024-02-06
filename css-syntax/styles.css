@@ -1,3 +1,25 @@
+body {
+  color: #090302;
+  font-family: sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+article {
+  padding-left: 16px;
+  padding-right: 16px;
+  border: 1px solid;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-family: monospace;
+  font-size: 24px;
+}
+
 #html {
   color: red;
 }
@@ -8,8 +30,4 @@
 
 #js {
   color: blue;
-}
-
-article {
-  border: 1px solid black;
 }
