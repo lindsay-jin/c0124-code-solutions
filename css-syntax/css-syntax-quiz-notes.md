@@ -14,8 +14,7 @@ Answer the following questions in the provided markdown file before turning in t
   tagName, tagName2, tagName3 {}
 
 - In CSS, how do you select an element by its `id` attribute?
-
-#
+  #idName
 
 ## Notes
 
