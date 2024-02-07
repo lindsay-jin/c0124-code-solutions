@@ -28,6 +28,10 @@ th {
   color: white;
 }
 
-.grey {
+/* .grey {
+  background-color: lightgrey;
+} */
+
+tr:nth-child(odd) {
   background-color: lightgrey;
 }
