@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+
+button {
+  font-size: 20px;
+  background-color: white;
+  width: 180px;
+  height: 35px;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+
+caption {
+  font-size: 25px;
+  font-style: bold;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+th {
+  background-color: black;
+  color: white;
+}
+
+.grey {
+  background-color: lightgrey;
+}
