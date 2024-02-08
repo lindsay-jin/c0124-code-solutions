@@ -11,10 +11,10 @@ Answer the following questions in the provided markdown file before turning in t
   nowrap
 
 - What axis do the `justify-content` properties work on?
-  flex-start
+  primary or main
 
 - What axis do the `align-items` properties work on?
-  stretch
+  cross
 
 ## Notes
 
