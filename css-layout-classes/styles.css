@@ -12,10 +12,6 @@
   display: flex;
 }
 
-img {
-  width: 100%;
-}
-
 /* space each column takes up in their row */
 .first > .column {
   width: calc(100% / 3);
@@ -35,6 +31,11 @@ img {
 
 .marioImage {
   width: calc(100% / 3);
+}
+
+/* set the images to be 100% */
+.character {
+  width: 100%;
 }
 
 /* font-size */
