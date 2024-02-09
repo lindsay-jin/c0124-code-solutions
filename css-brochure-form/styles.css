@@ -1,0 +1,61 @@
+/* set size for form */
+input,
+select {
+  display: block;
+  width: 600px;
+  height: 40px;
+  font-family: AtlasGrotesk, sans-serif;
+  font-weight: normal;
+}
+
+h1 {
+  text-align: center;
+  color: red;
+  font-family: AtlasGrotesk, sans-serif;
+  font-size: 1.3rem;
+}
+
+/* input box */
+input {
+  border-radius: 5px;
+  font-size: 1rem;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+
+/* set label a little to the left */
+label {
+  font-size: 1rem;
+  font-family: 'Brandon Grotesque', sans-serif;
+  font-weight: 500;
+  padding-left: 10px;
+  margin-bottom: 50px; /* why doesn't it do anything?? because margin bottom doesn't work on inline elements!! */
+}
+
+/* center form */
+div {
+  width: 600px;
+  margin: 0 auto;
+}
+
+select {
+  background-color: rgb(227, 227, 227);
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+button {
+  border-radius: 25px;
+  width: 100px;
+  height: 35px;
+  background-color: red;
+  color: white;
+  border: none;
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+.submitButton {
+  text-align: right;
+}
