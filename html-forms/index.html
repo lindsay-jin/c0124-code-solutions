@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Coding Form!</h1>
+    <form action="" method="post">
+      <p>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="user-email" />
+      </p>
+
+      <p>
+        <label for="reason" style="display: block"
+          >Why is coding so cool?</label
+        >
+        <select id="reason" name="'reason">
+          <option selected>Select an option</option>
+          <option value="">Because it's interesting</option>
+          <option value="">Because it's fun</option>
+          <option value="">Because it's powerful</option>
+        </select>
+      </p>
+
+      <p>
+        <label style="display: block">Favorite Language: (choose one)</label>
+        <label for="html">HTML</label>
+        <input type="radio" id="html" name="lang" checked />
+        <label for="css">CSS</label>
+        <input type="radio" id="css" name="lang" />
+        <label for="javascript">JavaScript</label>
+        <input type="radio" id="javascript" name="lang" />
+      </p>
+      <p>
+        <label for="signup" style="display: block"
+          >Would you like to sign up for more information?</label
+        >
+        <input type="checkbox" id="signup" name="signup" />
+        <label for="signup">Sign me up!</label>
+      </p>
+      <p>
+        <label for="comments" style="display: block">Comments</label>
+        <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+      </p>
+      <p>
+        <input type="submit" value="submit" />
+      </p>
+    </form>
+  </body>
+</html>
