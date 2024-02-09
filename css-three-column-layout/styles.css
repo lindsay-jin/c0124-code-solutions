@@ -1,0 +1,76 @@
+body {
+  font-family: Lato, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  background-color: rgb(25, 150, 218);
+  color: white;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+} /* centering content in the page */
+
+.row {
+  display: flex;
+} /* make sure each item in the row stacks horizontally next to each other */
+
+.row.header {
+  margin: 30px auto;
+} /* putting margin on top and bottom */
+
+h1 {
+  text-align: center;
+} /* why is it not centering?????? */
+
+.row.logos {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+} /* setting the row container, space out the 'circle columns' that the logos */
+
+.column-logo {
+  /* this is the div for the circle */
+  background-color: white;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px; /* both height and width needed for the circle */
+  display: flex;
+  justify-content: center; /* center the logo inside the column on the main axis */
+  align-items: center; /* center the logo inside the column on the vertical axis */
+}
+
+.logo {
+  width: 80px;
+}
+
+.logo3 {
+  margin-left: 30px;
+}
+
+/* last row */
+.row.message {
+  display: flex;
+} /* setting up the last row as a container */
+
+/* why is 'justify-content: space-around'
+not needed here but needed for the circle-columns to work?????? */
+
+/* adjusting the margins on the msg columns */
+.column-msg.streamline {
+  margin-right: 60px;
+}
+
+.column-msg.integrate {
+  margin-right: 60px;
+}
+
+/* center messages */
+h2,
+p {
+  text-align: center;
+}
+
+p {
+  color: beige;
+}
