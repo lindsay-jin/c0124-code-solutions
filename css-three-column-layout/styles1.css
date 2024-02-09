@@ -1,0 +1,72 @@
+body {
+  font-family: Lato, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  background-color: rgb(25, 150, 218);
+  color: white;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  gap: 30px;
+}
+
+.row.header {
+  margin: 30px auto;
+  justify-content: center;
+}
+
+.row.logos {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.column-logo {
+  background-color: white;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center; /* center the logo inside the column on the main axis */
+  align-items: center; /* center the logo inside the column on the vertical axis */
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+}
+
+/* last row */
+.row.message {
+  display: flex;
+}
+
+.column-msg {
+  justify-content: center;
+} /* margin between the message columns */
+
+/* center messages */
+h1 {
+  text-align: center;
+}
+
+h2,
+p {
+  text-align: center;
+}
+
+p {
+  color: beige;
+}
+
+.row-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
