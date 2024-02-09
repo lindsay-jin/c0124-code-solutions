@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+/* space each column takes up in their row */
+.first > .column {
+  width: calc(100% / 3);
+}
+
+.dkEssay {
+  width: calc(100% / 3 * 2);
+}
+
+.dkImage {
+  width: calc(100% / 3);
+}
+
+.marioEssay {
+  width: calc(100% / 3 * 2);
+}
+
+.marioImage {
+  width: calc(100% / 3);
+}
+
+/* set the images to be 100% */
+.character {
+  width: 100%;
+}
+
+/* font-size */
+
+p {
+  font-size: 18px;
+}
