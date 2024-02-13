@@ -1,5 +1,6 @@
 'use strict';
 const pokedex = [
+  // an array of objects
   {
     number: '001',
     name: 'Bulbasaur',
@@ -86,4 +87,14 @@ function renderPokemon(pokemon) {
   $p.textContent = pokemon.description;
   $pokemonCardText.appendChild($p);
   return $columnThird; //
+}
+const $row = document.querySelector('.row');
+if (!$row) throw new Error('The $row query failed');
+// Loop through your pokedex array and for each object:
+// pass the object to renderPokemon and get its return value
+// append the DOM tree returned by renderPokemon to the "row" element
+for (let i = 0; i < pokedex.length; i++) {
+  // debugger;
+  const $card = renderPokemon(pokedex[i]); // why use $??
+  $row.appendChild($card);
 }
