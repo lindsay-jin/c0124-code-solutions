@@ -1,0 +1,16 @@
+'use strict';
+let $heading = document.querySelector('h1');
+console.log('$heading:', $heading);
+console.dir($heading);
+let $explanation = document.querySelector('#explanation');
+console.log('$explanation:', $explanation);
+console.dir($explanation);
+let $hint = document.querySelector('.hint');
+console.log('$hint:', $hint);
+console.dir($hint);
+let $paragraphs = document.querySelectorAll('p');
+console.log('$paragraphs:', $paragraphs);
+console.dir($paragraphs);
+let $links = document.querySelectorAll('.example-link');
+console.log('$links', $links);
+console.dir('$links');
