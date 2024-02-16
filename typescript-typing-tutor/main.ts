@@ -12,19 +12,15 @@ const $currentCharacter = $characters[currentIndex];
 if (!$characters) throw new Error('The $characters query failed.');
 if (!$currentCharacter) throw new Error('The $currentCharacter query failed.');
 
-// if what I type ===  or not: if yes, letter 'g' turns green,
-// underline disappears from 'g', goes on letter 'r'
-// if not, then letter 'g' turns red, underline stays on that letter 'g'
-for (let i = 0; i < $characters.length; i++) {
-  console.log($characters[i].textContent);
-}
+// const $eventTarget = event?.target as HTMLElement;
 
-console.log($currentCharacter.textContent);
+// for (let i = 0; i < $characters.length; i++) { //loops through the entire phrase, output each character
+//   console.log($characters[i].textContent);
+// }
 
-// function check(){
-//   if(event.key === $currentCharacter.textContent){
-//     $currentCharacter.className = 'green'
-//   }
-// };
+// console.log($currentCharacter.textContent);
 
-// document.addEventListener('keydown', check)
+document.addEventListener('keydown', (event) => {
+  console.log('event', event);
+  console.log(event.key);
+}); // so event is KeyBoardEvent, and the property is key
