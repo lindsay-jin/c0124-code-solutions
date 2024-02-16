@@ -3,8 +3,8 @@ const $tabContainer = document.querySelector('.tab-container');
 const $tab = document.querySelectorAll('.tab');
 const $view = document.querySelectorAll('.view');
 if (!$tabContainer) throw new Error('The $tabContainer query failed.');
-if (!$tab) throw new Error('The $tab query failed.');
-if (!$view) throw new Error('The $view query failed.');
+//if (!$tab) throw new Error('The $tab query failed.'); //no need to throw an error here because a nodelist will return, if there's nothing, then it's empty
+//if (!$view) throw new Error('The $view query failed.');
 $tabContainer?.addEventListener('click', (event) => {
   if (!$tab) throw new Error('The $tab query failed.');
   const $eventTarget = event.target;
@@ -16,9 +16,9 @@ $tabContainer?.addEventListener('click', (event) => {
         tab.className = 'tab';
       }
     }
-    //const $dataViewValue = $eventTarget.dataset.view;
+    // const $dataViewValue = $eventTarget.dataset.view;
     const $dataViewValue = $eventTarget.getAttribute('data-view');
-    //console.log($dataViewValue)
+    // console.log($dataViewValue)
     for (const view of $view) {
       if (view.getAttribute('data-view') === $dataViewValue) {
         view.className = 'view';

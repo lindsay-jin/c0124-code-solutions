@@ -11,7 +11,7 @@ Answer the following questions in the provided markdown file before turning in t
   doesn't show up on the screen
 
 - What does the `element.matches()` method take as an argument and what does it return?
-  css selector, returns the element with that css selector
+  css selector, returns a boolean value
 
 - How can you retrieve the value of an element's attribute?
   getAttribute()
@@ -23,7 +23,7 @@ Answer the following questions in the provided markdown file before turning in t
   you would need an event listener on every tab
 
 - If you didn't use a loop to conditionally show or hide the views in the page, how would your JavaScript code be written instead?
-  check if tab clicked is the event target, then assign a class of display: none to tabs that are not clicked
+  you would need to write a separate if else statement
 
 ## Notes
 
