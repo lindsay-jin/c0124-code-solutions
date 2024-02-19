@@ -1,12 +1,43 @@
 body {
   display: flex;
   justify-content: center;
-  height: 100vh;
   align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.typing {
+  margin-bottom: 40px;
+}
+
+.open-modal {
+  align-self: flex-end;
+  width: 200px;
+  height: 30px;
+  font-size: 1rem;
+  color: rgb(19, 88, 148);
+  background-color: aliceblue;
+  border: 3px solid rgb(158, 206, 249);
+}
+
+.dismiss-modal {
+  background-color: rgb(235, 93, 93);
 }
 
 span {
   font-size: 2.5rem;
+}
+
+.grumpy,
+.wizards,
+.make,
+.toxic,
+.brew {
+  margin-right: 10px;
 }
 
 .underline {

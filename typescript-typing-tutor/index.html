@@ -7,19 +7,39 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div>
-      <span class="underline">g</span><span>r</span><span>u</span><span>m</span
-      ><span>p</span><span>y</span>
+    <div class="container">
+      <div class="typing">
+        <span class="grumpy"
+          ><span class="underline">g</span><span>r</span><span>u</span
+          ><span>m</span><span>p</span><span>y</span></span
+        >
 
-      <span>w</span><span>i</span><span>z</span><span>a</span><span>r</span
-      ><span>d</span><span>s</span>
+        <span class="wizards"
+          ><span>w</span><span>i</span><span>z</span><span>a</span><span>r</span
+          ><span>d</span><span>s</span></span
+        >
 
-      <span>m</span><span>a</span><span>k</span><span>e</span>
+        <span class="make"
+          ><span>m</span><span>a</span><span>k</span><span>e</span></span
+        >
 
-      <span>t</span><span>o</span><span>x</span><span>i</span><span>c</span>
+        <span class="toxic"
+          ><span>t</span><span>o</span><span>x</span><span>i</span
+          ><span>c</span></span
+        >
 
-      <span>b</span><span>r</span><span>e</span><span>w</span>
+        <span class="brew"
+          ><span>b</span><span>r</span><span>e</span><span>w</span></span
+        >
+      </div>
+      <button class="open-modal">Show me the score!</button>
     </div>
+    <dialog>
+      <h2>You scored: <span id="score"></span></h2>
+      <div class="modal-button">
+        <button class="dismiss-modal"></button>
+      </div>
+    </dialog>
     <script src="main.js"></script>
   </body>
 </html>
