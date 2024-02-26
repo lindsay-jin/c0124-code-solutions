@@ -1,6 +1,7 @@
 const $countdown = document.querySelector('.countdown-display');
 if (!$countdown) throw new Error('The $h1 query has failed.');
 
+const intervalId = setInterval(timer, 1000);
 setInterval(timer, 1000);
 let count = 4;
 function timer(): void {
@@ -13,4 +14,5 @@ function timer(): void {
     $countdown.textContent = (count--).toString();
   } else if ($countdown.textContent === '1')
     $countdown.textContent = '~Earth Beeeelooowww Us~';
+  clearInterval(intervalId);
 }
