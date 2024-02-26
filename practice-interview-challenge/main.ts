@@ -16,17 +16,15 @@ function getRangeReport(start: number,end: number): any {
     };
 
     range.push(i);
-
-    let object = {
-      total: total += i,
-      odds: odds.push(i),
-      evens: evens.push(i),
-      range: range.push(i),
-      average: total/range.length,
-    };
-
-    return(object);
-
   };
+
+  let object = {
+  total: ,
+  odds: ,
+  evens: ,
+  range: ,
+  average: total / range.length,
+};
+return object;
 
 }
