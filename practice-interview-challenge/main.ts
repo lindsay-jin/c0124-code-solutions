@@ -19,10 +19,10 @@ function getRangeReport(start: number,end: number): any {
   };
 
   let object = {
-  total: ,
-  odds: ,
-  evens: ,
-  range: ,
+  total: total,
+  odds: odds,
+  evens: evens,
+  range: range,
   average: total / range.length,
 };
 return object;
