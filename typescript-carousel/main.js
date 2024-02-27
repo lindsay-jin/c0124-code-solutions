@@ -15,20 +15,20 @@ let index = 0;
 // automatic changing of images
 function timer() {
   if (index >= 0 && index < 4) {
-    $dots[index].setAttribute('class', 'fa-solid fa-circle dots');
-    for (let i = 0; i < $dots.length; i++) {
-      if (i !== index) {
-        // Update the class of other dots to just circle
-        $dots[i].setAttribute('class', 'fa-regular fa-circle dots');
-      }
-    }
     index++;
-    $img?.setAttribute('src', images[index]);
   } else if (index === 4) {
     index = 0;
-    $img?.setAttribute('src', images[index]);
   }
+  for (let x = 0; x < $dots.length; x++) {
+    if (x === index) {
+      $dots[x].setAttribute('class', 'fa-solid fa-circle dots');
+    } else {
+      $dots[x].setAttribute('class', 'fa-regular fa-circle dots');
+    }
+  }
+  $img?.setAttribute('src', images[index]);
 }
+//why is the first dot not solid??
 // next one:
 $rightAngle?.addEventListener('click', next);
 function next() {
@@ -39,6 +39,13 @@ function next() {
   } else if (index === 4) {
     $img?.setAttribute('src', images[0]);
     index = 0;
+  }
+  for (let x = 0; x < $dots.length; x++) {
+    if (x === index) {
+      $dots[x].setAttribute('class', 'fa-solid fa-circle dots');
+    } else {
+      $dots[x].setAttribute('class', 'fa-regular fa-circle dots');
+    }
   }
   intervalId = setInterval(timer, 3000);
 }
@@ -53,10 +60,16 @@ function previous() {
     $img?.setAttribute('src', images[4]);
     index = 4;
   }
+  for (let x = 0; x < $dots.length; x++) {
+    if (x === index) {
+      $dots[x].setAttribute('class', 'fa-solid fa-circle dots');
+    } else {
+      $dots[x].setAttribute('class', 'fa-regular fa-circle dots');
+    }
+  }
   intervalId = setInterval(timer, 3000);
 }
-//<i class="fa-solid fa-circle"></i>;
-//dots:
+// dots:
 for (let i = 0; i < $dots.length; i++) {
   $dots[i].addEventListener('click', () => {
     clearInterval(intervalId);
@@ -65,7 +78,6 @@ for (let i = 0; i < $dots.length; i++) {
     }
     $dots[i].setAttribute('class', 'fa-solid fa-circle');
     $img?.setAttribute('src', images[i]);
+    intervalId = setInterval(timer, 3000);
   });
 }
-//i want the accompanying dot to be solid when the image shows up
-// i want the timer to reset after i click on dot
