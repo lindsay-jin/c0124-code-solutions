@@ -5,7 +5,8 @@
 Answer the following questions in the provided markdown file before turning in this exercise:
 
 - What are the `&&` (logical AND) and `||` (logical OR) operators and how can they be used outside of `if` statements?
-  The logical AND (&&) (logical conjunction) operator for a set of boolean operands will be true if and only if all the operands are true. Otherwise it will be false. Logical AND (&&) evaluates operands from left to right, returning immediately with the value of the first falsy operand it encounters; if all values are truthy, the value of the last operand is returned.
+
+The logical AND (&&) (logical conjunction) operator for a set of boolean operands will be true if and only if all the operands are true. Otherwise it will be false. Logical AND (&&) evaluates operands from left to right, returning immediately with the value of the first falsy operand it encounters; if all values are truthy, the value of the last operand is returned.
 
 Can be used for type assertion.
 
