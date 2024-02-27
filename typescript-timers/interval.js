@@ -14,5 +14,4 @@ function timer() {
   } else if ($countdown.textContent === '1')
     $countdown.textContent = '~Earth Beeeelooowww Us~';
   clearInterval(intervalId);
-  console.log('hello');
 }
