@@ -32,7 +32,7 @@ Answer the following questions in the provided markdown file before turning in t
   npm install nameOfDependencies
 
 - What happens when you add a dependency to a package with `npm`?
-  It gets added to dependencies in package.json
+  a node_modules folder gets added
 
 - What is a devDependency and how do you add one to a package?
   a package that is required for development, but not for running an application. --save-dev
