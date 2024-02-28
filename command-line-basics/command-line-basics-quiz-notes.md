@@ -5,8 +5,10 @@
 Answer the following questions in the provided markdown file before turning in this exercise:
 
 - What is a CLI?
+  a means of interacting with a computer program by inputting lines of text called command-lines
 
 - What is a GUI?
+  A graphical user interface (GUI) is a digital interface in which a user interacts with graphical components such as icons, buttons, and menus. In a GUI, the visuals displayed in the user interface convey information relevant to the user, as well as actions that they can take.
 
 - Give at least one use case for each of the commands listed in this exercise.
 
