@@ -28,6 +28,9 @@ function is2(person: any): any {
 const user = users.find(is2);
 console.log('user', user);
 
+// const user = users.find((user)=> user.id===2)
+// const user = users.find(({ id })=> id===2) //destructuring
+
 // find the first object inside of the products array that has a price greater than 900,
 // and assign it to a variable expensiveProduct
 function moreThan900(person: any): any {
@@ -35,3 +38,5 @@ function moreThan900(person: any): any {
 }
 const expensiveProduct = products.find(moreThan900);
 console.log('expensiveProduct', expensiveProduct);
+
+// products.find((product)=>product.price>900)
