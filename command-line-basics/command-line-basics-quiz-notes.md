@@ -24,7 +24,7 @@ Answer the following questions in the provided markdown file before turning in t
     -F adds a trailing indicator to entries to indicate their type
 
   - `pwd`
-    print name of current/working directory, pwd, pwd i-was-here.txt
+    print name of current/working directory, pwd, pwd > i-was-here.txt
 
   - `echo`
     display a line of text
