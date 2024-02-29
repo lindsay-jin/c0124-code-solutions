@@ -31,14 +31,23 @@
           <span>b</span><span>r</span><span>e</span><span>w</span>
         </div>
       </div>
-      <button class="open-modal">Show me the score!</button>
+      <div class="button-container">
+        <button class="open-modal">Show me the score!</button>
+      </div>
     </div>
+
     <dialog>
-      <h2>You scored: <span id="score"></span></h2>
-      <div class="modal-button">
+      <div class="close-button-container">
         <button class="dismiss-modal"></button>
       </div>
+      <h2>You scored: <span id="score"></span></h2>
+      <h2>Try again?</h2>
+      <div>
+        <button class="yes-button">Yes!</button>
+        <button class="no-button">No</button>
+      </div>
     </dialog>
+
     <script src="main.js"></script>
   </body>
 </html>
