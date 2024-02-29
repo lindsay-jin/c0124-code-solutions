@@ -6,18 +6,18 @@ let $currentCharacter = $characters[currentIndex];
 if (!$characters) throw new Error('The $characters query failed.');
 if (!$currentCharacter) throw new Error('The $currentCharacter query failed.');
 document.addEventListener('keydown', (event) => {
-  const typedKey = event.key;
-  //let correctCount = 0;
+  const typedKey = event.key; //whatever I typed
+  // let correctCount = 0;
   if (typedKey === $currentCharacter.textContent) {
     $currentCharacter.classList.add('green');
-    //correctCount++
-    currentIndex++;
     $currentCharacter.classList.remove('underline');
+    // correctCount++
+    currentIndex++;
     $currentCharacter = $characters[currentIndex];
-    $currentCharacter.className = 'underline';
+    $currentCharacter.classList.add('underline');
   } else {
     $currentCharacter.classList.add('red');
-  } //return correctCount;
+  } // return correctCount;
 });
 // show typing accuracy
 // const $openModal = document.querySelector('.open-modal'); // open dialog button
@@ -34,4 +34,4 @@ document.addEventListener('keydown', (event) => {
 //   $dialog?.close();
 // }
 // $dismissModal.addEventListener('click', close);
-//When the user finishes typing the phrase, they can be asked if they'd like to play again.
+// When the user finishes typing the phrase, they can be asked if they'd like to play again.

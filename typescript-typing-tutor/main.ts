@@ -8,16 +8,16 @@ if (!$characters) throw new Error('The $characters query failed.');
 if (!$currentCharacter) throw new Error('The $currentCharacter query failed.');
 
 document.addEventListener('keydown', (event) => {
-  const typedKey = event.key;
+  const typedKey = event.key; // whatever I typed
   // let correctCount = 0;
 
   if (typedKey === $currentCharacter.textContent) {
     $currentCharacter.classList.add('green');
+    $currentCharacter.classList.remove('underline');
     // correctCount++
     currentIndex++;
-    $currentCharacter.classList.remove('underline');
     $currentCharacter = $characters[currentIndex];
-    $currentCharacter.className = 'underline';
+    $currentCharacter.classList.add('underline');
   } else {
     $currentCharacter.classList.add('red');
   } // return correctCount;

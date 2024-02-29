@@ -41,6 +41,7 @@ span {
 .make,
 .toxic,
 .brew {
+  display: inline-block;
   margin-right: 10px;
 }
 
