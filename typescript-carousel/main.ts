@@ -83,12 +83,15 @@ function previous(): void {
 // dots:
 for (let i = 0; i < $dots.length; i++) {
   $dots[i].addEventListener('click', () => {
+    const currentIndex = i;
+
     clearInterval(intervalId);
+
     for (let x = 0; x < $dots.length; x++) {
       $dots[x].setAttribute('class', 'fa-regular fa-circle');
     }
-    $dots[i].setAttribute('class', 'fa-solid fa-circle');
-    $img?.setAttribute('src', images[i]);
+    $dots[currentIndex].setAttribute('class', 'fa-solid fa-circle');
+    $img?.setAttribute('src', images[currentIndex]);
     intervalId = setInterval(timer, 3000);
   });
 }

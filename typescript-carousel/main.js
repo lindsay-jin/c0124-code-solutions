@@ -28,7 +28,7 @@ function timer() {
   }
   $img?.setAttribute('src', images[index]);
 }
-//why is the first dot not solid??
+// why is the first dot not solid??
 // next one:
 $rightAngle?.addEventListener('click', next);
 function next() {
@@ -72,12 +72,13 @@ function previous() {
 // dots:
 for (let i = 0; i < $dots.length; i++) {
   $dots[i].addEventListener('click', () => {
+    let currentIndex = i;
     clearInterval(intervalId);
     for (let x = 0; x < $dots.length; x++) {
       $dots[x].setAttribute('class', 'fa-regular fa-circle');
     }
-    $dots[i].setAttribute('class', 'fa-solid fa-circle');
-    $img?.setAttribute('src', images[i]);
+    $dots[currentIndex].setAttribute('class', 'fa-solid fa-circle');
+    $img?.setAttribute('src', images[currentIndex]);
     intervalId = setInterval(timer, 3000);
   });
 }
