@@ -11,6 +11,7 @@ Answer the following questions in the provided markdown file before turning in t
   GET
 
 - How do you specify the request method (`GET`, `POST`, etc.) when calling `fetch`?
+  use the options object and use the method property.
   method: "POST", // \*GET, POST, PUT, DELETE, etc. inside the async function
 
 - How does `fetch` report errors?
