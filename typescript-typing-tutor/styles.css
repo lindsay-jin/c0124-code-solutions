@@ -33,8 +33,19 @@ button {
   border: 3px solid rgb(158, 206, 249);
 }
 
+dialog {
+  width: 300px;
+}
+
+.close-button-container {
+  display: flex;
+  justify-content: end;
+}
+
 .dismiss-modal {
   background-color: rgb(235, 93, 93);
+  font-weight: bold;
+  font-size: large;
 }
 
 span {
@@ -60,4 +71,14 @@ span {
 
 .red {
   color: red;
+}
+
+.yes-button,
+.no-button {
+  width: 100px;
+  margin-right: 20px;
+  background-color: aliceblue;
+  border: 3px solid rgb(158, 206, 249);
+  color: navy;
+  font-size: 1rem;
 }
