@@ -5,8 +5,7 @@
 Answer the following questions in the provided markdown file before turning in this exercise:
 
 - How do you indicate the relative link to a parent directory?
-  you would go up a directory level by using .. then back down into the directory you're in and then the file name you want to link to
-
+  you would go up a directory level by using .. then back down into the directory you're in and then the file name you want to link to.
 - How do you indicate the relative link to a child directory?
   you would specify the directory the file is in, and then forward slash the name of the file you want to link to
 
