@@ -3,5 +3,5 @@ type Prop = {
 };
 
 export function Banner({ item }: Prop) {
-  return <p>{item}</p>;
+  return <p style={{ fontSize: '2rem' }}>{item}</p>;
 }
