@@ -1,12 +1,13 @@
-export function Indicators() {
-  return (
-    <div>
-      <button>0</button>
-      <button>1</button>
-      <button>2</button>
-      <button>3</button>
-      <button>4</button>
-      <button>5</button>
-    </div>
-  );
+type Prop = {
+  count: number;
+  index: number;
+};
+
+export function Indicators({ count }: Prop) {
+  const rowOfButtons: JSX.Element[] = [];
+  for (let i = 0; i < count; i++) {
+    rowOfButtons.push(<button key={i}>{i}</button>);
+  }
+
+  return <div>{rowOfButtons}</div>;
 }
