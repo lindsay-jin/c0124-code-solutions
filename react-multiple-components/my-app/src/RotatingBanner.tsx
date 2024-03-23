@@ -9,14 +9,30 @@ type Prop = {
 };
 
 export function RotatingBanner({ items }: Prop) {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [currentIndex, setCurrentIndex] = useState(4);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  function handleForward() {
+    setCurrentIndex((currentIndex + 1) % items.length);
+  }
+
+  function handleBackward() {
+    setCurrentIndex((currentIndex - 1 + items.length) % items.length);
+  }
+
+  function handleIndicatorClick(clickedIndex: number) {
+    setCurrentIndex(clickedIndex);
+  }
+
   return (
     <>
       <Banner item={items[currentIndex]} />
-      <PrevButton />
-      <Indicators count={items.length} index={currentIndex} />
-      <NextButton />
+      <PrevButton onPrevClick={handleBackward} />
+      <Indicators
+        count={items.length}
+        index={currentIndex}
+        onIndicatorClick={handleIndicatorClick}
+      />
+      <NextButton onNextClick={handleForward} />
     </>
   );
 }
