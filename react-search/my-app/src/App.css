@@ -1,0 +1,14 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+ul {
+  padding-left: 13px;
+}
+
+input {
+  width: 100%;
+  background-image: url('../search-icon.svg');
+}
