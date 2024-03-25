@@ -1,0 +1,29 @@
+.main-container {
+  flex-wrap: nowrap;
+}
+
+.first-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.second-container {
+  display: flex;
+  justify-content: center;
+}
+
+.img-container {
+  width: 475px;
+  height: 475px;
+}
+
+i {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.fa-angle-right,
+.fa-angle-left {
+  cursor: pointer;
+}
