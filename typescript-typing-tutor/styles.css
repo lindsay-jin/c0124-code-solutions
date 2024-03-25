@@ -1,0 +1,84 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.typing {
+  margin-bottom: 40px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: end;
+}
+
+button {
+  cursor: pointer;
+}
+
+.open-modal {
+  align-self: flex-end;
+  width: 200px;
+  height: 30px;
+  font-size: 1rem;
+  color: rgb(19, 88, 148);
+  background-color: aliceblue;
+  border: 3px solid rgb(158, 206, 249);
+}
+
+dialog {
+  width: 300px;
+}
+
+.close-button-container {
+  display: flex;
+  justify-content: end;
+}
+
+.dismiss-modal {
+  background-color: rgb(235, 93, 93);
+  font-weight: bold;
+  font-size: large;
+}
+
+span {
+  font-size: 2.5rem;
+}
+
+.grumpy,
+.wizards,
+.make,
+.toxic,
+.brew {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.underline {
+  border-bottom: 3px solid black;
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+.yes-button,
+.no-button {
+  width: 100px;
+  margin-right: 20px;
+  background-color: aliceblue;
+  border: 3px solid rgb(158, 206, 249);
+  color: navy;
+  font-size: 1rem;
+}
