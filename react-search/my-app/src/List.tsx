@@ -11,7 +11,7 @@ export function List({ lists }: Prop) {
     );
   }
 
-  const result = lists.map((list) => <li>{list}</li>);
+  const result = lists.map((list, index) => <li key={index}>{list}</li>);
   //mapping over the filtered list
 
   return (

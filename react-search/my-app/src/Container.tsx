@@ -25,7 +25,7 @@ export function Container() {
   }
 
   const lists = quotes.filter((list) =>
-    list.toLowerCase().includes(searchList.toLowerCase())
+    list.toLocaleLowerCase().includes(searchList.toLocaleLowerCase())
   );
 
   return (
