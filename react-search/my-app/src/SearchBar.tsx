@@ -5,7 +5,6 @@ type Prop = {
 export function SearchBar({ onType }: Prop) {
   return (
     <div>
-      <img src="../search-solid.svg" alt="" />
       <input
         type="text"
         placeholder="search"
