@@ -21,7 +21,7 @@ export function Carousel({ images }: Prop) {
       setActiveIndex((activeIndex + 1) % images.length);
     }, 3000);
     return () => clearTimeout(timerId);
-  }, [activeIndex]);
+  }, [activeIndex, images.length]);
 
   function handlePrevClick() {
     setActiveIndex((activeIndex - 1 + images.length) % images.length);
@@ -43,7 +43,11 @@ export function Carousel({ images }: Prop) {
         <NextButton onNextClick={handleNextClick} />
       </div>
       <div>
-        <Dots images={images} onDotsClick={handleDotsClick} />
+        <Dots
+          images={images}
+          onDotsClick={handleDotsClick}
+          currentIndex={images.length}
+        />
       </div>
     </div>
   );
