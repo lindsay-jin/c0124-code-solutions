@@ -1,9 +1,5 @@
 import { GoDot } from 'react-icons/go';
-
-type Images = {
-  src: string;
-  alt: string;
-};
+import { Images } from './Carousel';
 
 type Prop = {
   images: Images[];

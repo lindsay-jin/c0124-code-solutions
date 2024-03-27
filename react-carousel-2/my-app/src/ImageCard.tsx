@@ -1,7 +1,4 @@
-type Images = {
-  src: string;
-  alt: string;
-};
+import { Images } from './Carousel';
 
 type Prop = {
   image: Images;

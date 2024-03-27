@@ -4,7 +4,7 @@ import { PrevButton } from './PrevButton';
 import { NextButton } from './NextButton';
 import { useEffect, useState } from 'react';
 
-type Images = {
+export type Images = {
   src: string;
   alt: string;
 };
