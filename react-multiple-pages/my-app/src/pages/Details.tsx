@@ -1,16 +1,11 @@
 import { useEffect, useState } from 'react';
 import { type Item, readItem } from '../lib/read';
 import './Details.css';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 
-type Props = {
-  itemId: number;
-};
-
-export function Details({ itemId }: Props) {
-
-  //const { itemId } = useParams();
-
+export function Details() {
+  const { itemId } = useParams();
+  const navigate = useNavigate();
   const [item, setItem] = useState<Item>();
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<unknown>();
@@ -32,6 +27,11 @@ export function Details({ itemId }: Props) {
     }
   }, [itemId]);
 
+  function handleSave() {
+    alert(`Saved ${item?.name}`);
+    navigate('/');
+  }
+
   if (isLoading) return <div>Loading...</div>;
   if (error || !item) {
     return (
@@ -48,7 +48,7 @@ export function Details({ itemId }: Props) {
         <div className="card-body">
           <div className="row">
             <div className="col">
-              <Link to="/dashboard" className="btn text-secondary">
+              <Link to="/" className="btn text-secondary">
                 &lt; Back to Dashboard
               </Link>
             </div>
@@ -68,6 +68,7 @@ export function Details({ itemId }: Props) {
           </div>
         </div>
       </div>
+      <button onClick={handleSave}>Save</button>
     </div>
   );
 }

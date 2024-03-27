@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import { type Item, readItems } from '../lib/read';
 import { Link } from 'react-router-dom';
 
-
 export function Dashboard() {
   const [items, setItems] = useState<Item[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -55,7 +54,8 @@ type CardProps = {
 };
 function ItemCard({ item }: CardProps) {
   return (
-    <Link to="details/:itemId"
+    <Link
+      to={`details/${item.itemId}`}
       className="item card-body text-dark card mb-4 shadow-sm text-decoration-none">
       <h5 className="card-title">{item.name}</h5>
     </Link>

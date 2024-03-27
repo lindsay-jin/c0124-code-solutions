@@ -1,20 +1,11 @@
-import { useState } from 'react';
 import { About } from './pages/About';
 import { Dashboard } from './pages/Dashboard';
 import { Header } from './components/Header';
 import { NotFound } from './pages/NotFound';
 import { Details } from './pages/Details';
-import { Routes, Route, Outlet, Link} from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 export function App() {
-  const [page, setPage] = useState('dashboard');
-  const [itemId, setItemId] = useState<number>();
-
-  function handleDetails(itemId: number): void {
-    setPage('details');
-    setItemId(itemId);
-  }
-
   return (
     <>
       <Routes>
@@ -29,10 +20,7 @@ export function App() {
   );
 }
 
-
 export default App;
-
-
 
 // return (
 //   <>
