@@ -46,7 +46,7 @@ export function Carousel({ images }: Prop) {
         <Dots
           images={images}
           onDotsClick={handleDotsClick}
-          currentIndex={images.length}
+          currentIndex={activeIndex}
         />
       </div>
     </div>
