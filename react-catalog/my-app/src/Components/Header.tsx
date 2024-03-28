@@ -1,22 +1,17 @@
-import { Outlet } from "react-router-dom";
+import { Outlet } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import './Header.css';
 
-export function Header(){
+export function Header() {
   return (
     <div>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/about">
-              About
-            </Link>
-          </li>
-          <li>
-            <Link to="/">
-              Catalog
-            </Link>
-          </li>
-        </ul>
+      <nav className="navBar">
+        <Link to="/about" className="aboutLink">
+          About
+        </Link>
+        <Link to="/" className="catalogLink">
+          Catalog
+        </Link>
       </nav>
       <Outlet />
     </div>
