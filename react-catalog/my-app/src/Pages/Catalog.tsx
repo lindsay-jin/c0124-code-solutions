@@ -21,6 +21,7 @@ export function Catalog() {
       }
     }
     loadProducts();
+    setIsLoading(true);
   }, []);
 
   if (isLoading) {
