@@ -1,15 +1,15 @@
-import { ReactNode, useEffect, useRef } from 'react';
+import React, { ReactNode, useEffect, useRef } from 'react';
 
-type Prop = {
+type Props = {
   children: ReactNode;
   isOpen: boolean;
   onClose: () => void;
 };
-export function Modal({ children, isOpen, onClose }: Prop) {
+export function Modal({ children, isOpen, onClose }: Props) {
   const modal = useRef<HTMLDialogElement>(null);
 
-  function handleKeyDown(event: React.KeyboardEvent<HTMLDialogElement>) {
-    event.key === 'Escape' && onClose();
+  function handleEscape(event: React.KeyboardEvent<HTMLDialogElement>) {
+    event.key === 'Escape' ? onClose() : '';
   }
 
   useEffect(() => {
@@ -17,8 +17,11 @@ export function Modal({ children, isOpen, onClose }: Prop) {
   }, [isOpen]);
 
   return (
-    <dialog ref={modal} onKeyDown={handleKeyDown}>
-      {children}
-    </dialog>
+    <>
+      <dialog ref={modal} onKeyDown={handleEscape}>
+        {children}
+      </dialog>
+      {/* The current property of ref object gives you access to the <dialog> DOM element */}
+    </>
   );
 }
