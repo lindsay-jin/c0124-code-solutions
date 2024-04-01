@@ -1,6 +1,6 @@
-import { Link, Outlet } from 'react-router-dom';
-import './AppDrawer.css';
+import { NavLink, Outlet } from 'react-router-dom';
 import { FaBars } from 'react-icons/fa';
+import './AppDrawer.css';
 import { useState } from 'react';
 
 export type MenuItem = {
@@ -11,59 +11,30 @@ export type MenuItem = {
 
 type Props = {
   menuItems: MenuItem[];
+  name: string;
 };
-export function AppDrawer({ menuItems }: Props) {
-  const [isOpen, setIsOpen] = useState(false);
-
-  function handleClick() {
-    setIsOpen(!isOpen);
-  }
+export function AppDrawer({ menuItems, name }: Props) {
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
-    <div
-      className={`d-flex flex-column vw-100 menu-drawer ${
-        isOpen ? 'is-open' : ''
-      }`}>
-      <nav className="navbar navbar-expand-sm navbar-dark shadow-sm">
-        <div className="navbar-collapse menu-drawer">
-          <FaBars onClick={handleClick} className="menu-icon" />
-          <ul className="navbar-nav mr-auto menu-items">
-            {menuItems.map((menu) => (
-              <Menu key={menu.name} menu={menu} isOpen={isOpen} />
-            ))}
-          </ul>
-        </div>
-      </nav>
-      <div className="flex-grow-1">
+    <div className="app-drawer">
+      <div className={isOpen ? 'is-open' : ''}>
+        <FaBars onClick={() => setIsOpen(!isOpen)} className="menu-icon" />
+        {isOpen && <h3 className="menu-heading">{name}</h3>}
+        <ul className="menu-items">
+          {menuItems.map((menu) => (
+            <li key={menu.name} className="menu-item">
+              <NavLink to={menu.path} className="menu-link">
+                <img src={menu.iconUrl} className="item-icon" />
+                {isOpen && menu.name}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="outlet">
         <Outlet />
       </div>
     </div>
-  );
-}
-
-type MenuProps = {
-  menu: MenuItem;
-  isOpen: boolean;
-};
-function Menu({ menu, isOpen }: MenuProps) {
-  return (
-    <li key={menu.name} className="nav-item nav-link menu-item">
-      <Link to={menu.path} className="menu-link">
-        {isOpen ? (
-          <>
-            <img
-              src={menu.iconUrl}
-              style={{ width: '50px' }}
-              className="item-icon"
-            />
-            {menu.name}{' '}
-          </>
-        ) : (
-          <>
-            <img src={menu.iconUrl} style={{ width: '50px' }} />
-          </>
-        )}
-      </Link>
-    </li>
   );
 }

@@ -13,7 +13,9 @@ const menuItems = [
 export function App() {
   return (
     <Routes>
-      <Route path="/" element={<AppDrawer menuItems={menuItems} />}>
+      <Route
+        path="/"
+        element={<AppDrawer menuItems={menuItems} name="Hylian Shopping" />}>
         <Route index element={<Catalog />} />
         <Route path="details/:productId" element={<ProductDetails />} />
         <Route path="about" element={<About />} />

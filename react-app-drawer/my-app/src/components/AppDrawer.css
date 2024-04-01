@@ -1,5 +1,18 @@
+.title {
+  color: white;
+}
+
 * {
   box-sizing: border-box;
+}
+
+.app-drawer {
+  display: flex;
+  width: 100vw;
+}
+
+.outlet {
+  flex-grow: 1;
 }
 
 .menu-icon {
@@ -59,7 +72,8 @@
 }
 
 .menu-link.active {
-  background-color: rgb(212, 234, 251);
+  /* background-color: rgb(212, 234, 251); */
+  font-weight: bold;
 }
 
 .item-icon {
