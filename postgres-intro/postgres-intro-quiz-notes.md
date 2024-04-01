@@ -8,11 +8,16 @@ Answer the following questions in the provided markdown file before turning in t
   can be shared by many users
 
 - What is PostgreSQL and what are some alternative relational databases?
-  open source data management system.
+  open source relational data management system.
+  relational database are commonly referred to as SQL database
+
+mySQL, SQL lite, Oracle
 
 - What are some advantages of learning a relational database?
+  when data is being added or changed, either all the changes are made completely or none at all. This way, you won't end up with data that is only partially updated, which could lead to inaccuracies. only allow the correct information to be stored in their books, make sure all the information is written down completely and correctly, and don't allow any scribbles that could mess up the information.
 
 - What is one way to see if PostgreSQL is running?
+  sudo service postgresql status
 
 ## Notes
 
