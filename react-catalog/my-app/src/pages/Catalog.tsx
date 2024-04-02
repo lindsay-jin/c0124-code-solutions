@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { type Product, readCatalog } from '../lib';
+import { type Product, readCatalog, toDollars } from '../lib';
 import { useEffect, useState } from 'react';
 import './Catalog.css';
 
@@ -65,7 +65,7 @@ function ItemCard({ product }: Props) {
       </div>
       <div className="infoContainer">
         <p className="name">{name}</p>
-        <p className="price">{price}</p>
+        <p className="price">{toDollars(price)}</p>
         <p className="shortText">{shortDescription}</p>
       </div>
     </Link>

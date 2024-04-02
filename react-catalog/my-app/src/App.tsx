@@ -13,7 +13,7 @@ export default function App() {
         <Route path="/" element={<Header />}>
           <Route index element={<Catalog />} />
           <Route path="about" element={<About />} />
-          <Route path="details/:productId" element={<Details />} />
+          <Route path="details/:id" element={<Details />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
