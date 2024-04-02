@@ -1,9 +1,9 @@
 import { Route, Routes } from 'react-router-dom'
-import { Header } from './Components/Header';
-import { Catalog } from './Pages/Catalog';
-import { Details } from './Pages/Details';
-import { About } from './Pages/About';
-import { NotFound } from './Pages/NotFound';
+import { Header } from './components/Header';
+import { Catalog } from './pages/Catalog';
+import { Details } from './pages/Details';
+import { About } from './pages/About';
+import { NotFound } from './pages/NotFound';
 import './App.css';
 
 export default function App() {
@@ -12,8 +12,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Header />}>
           <Route index element={<Catalog />} />
-          <Route path="/details/:productId" element={<Details />} />
-          <Route path="/about" element={<About />} />
+          <Route path="about" element={<About />} />
+          <Route path="details/:productId" element={<Details />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
