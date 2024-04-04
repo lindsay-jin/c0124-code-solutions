@@ -39,13 +39,14 @@ app.get('/api/films/:filmId', async (req, res, next) => {
     `;
     const params = [filmId as string];
     const { rows } = await db.query(sql, params);
-    if (!rows) {
+    const [film] = rows;
+    if (!film) {
       throw new ClientError(
         404,
         `No matching film with ${filmId} exist in the database.`
       );
     }
-    res.json(rows);
+    res.json(film);
   } catch (err) {
     next(err);
   }
