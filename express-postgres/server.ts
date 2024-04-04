@@ -39,7 +39,7 @@ app.get('/api/film', async (req, res, next) => {
     `;
     const params = [filmId as string];
     const result = await db.query(sql, params);
-    const film = result.rows;
+    const [film] = result.rows;
     if (!film) {
       throw new ClientError(
         404,
@@ -70,7 +70,8 @@ app.put('/api/film', async (req, res, next) => {
     const sql = `
       update "films"
       set "title" = $2
-      where "filmId" = $1;
+      where "filmId" = $1
+      returning *;
     `;
     const params = [filmId as string, title as string];
     const result = await db.query(sql, params);
