@@ -27,6 +27,9 @@ export function Users() {
             method: 'get',
           }
         );
+        if (!response.ok) {
+          throw new Error(`Fetch error ${response.ok}`);
+        }
         const result = await response.json();
         setUsers(result);
         setIsLoading(false);
@@ -34,10 +37,11 @@ export function Users() {
       } catch (error) {
         setError(error);
         console.error('Error:', error);
+      } finally {
+        setIsLoading(false);
       }
     }
     loadUser();
-    setIsLoading(false);
   }, []);
 
   if (isLoading) {

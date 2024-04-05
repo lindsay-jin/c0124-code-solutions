@@ -21,11 +21,16 @@ export function UserDetails({ userId, onCancel }: Props) {
             method: 'get',
           }
         );
+        if (!response.ok) {
+          throw new Error(`Fetch error ${response.ok}`);
+        }
         const result = await response.json();
         setUser(result);
         setIsLoading(false);
       } catch (error) {
         setError(error);
+      } finally {
+        setIsLoading(false);
       }
     }
     loadUserDetails(userId);
