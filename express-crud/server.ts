@@ -12,15 +12,18 @@ const db = new pg.Pool({
 const app = express();
 app.use(express.json());
 
+// function validateGradeId(gradeId:string): void {
+//   if (!Number.isInteger(+gradeId)) {
+//     throw new ClientError(400, `Please use an integer for Id`);
+//   }
+// }
+
 app.get('/api/grades', async (req, res, next) => {
   try {
     const sql = `
       select * from "grades"
     `;
-    // what if client enters the wrong table name
     const result = await db.query(sql);
-    const rows = result.rows[0];
-    if (!rows) return '';
     res.status(200).json(result);
   } catch (err) {
     next(err);
