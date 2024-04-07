@@ -5,13 +5,19 @@ import './Header.css';
 export function Header() {
   return (
     <div>
-      <nav>
-        <ul>
-          <Link to="/about">About</Link>
-          <Link to="/">Catalog</Link>
-        </ul>
-      </nav>
-      <div>
+      <div className="navBar">
+        <nav>
+          <ul>
+            <Link to="/about" className="aboutLink">
+              About
+            </Link>
+            <Link to="/" className="catalogLink">
+              Catalog
+            </Link>
+          </ul>
+        </nav>
+      </div>
+      <div className="outlet">
         <Outlet />
       </div>
     </div>
