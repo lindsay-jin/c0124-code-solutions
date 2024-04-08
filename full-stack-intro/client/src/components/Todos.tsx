@@ -24,7 +24,7 @@ export function Todos() {
       try {
         const response = await fetch('/api/todos');
         if (!response.ok)
-          throw new Error(`Fetch error with status: ${response.ok}`);
+          throw new Error(`Fetch error with status: ${response.status}`);
         const result = await response.json();
         setTodos(result);
       } catch (error) {
@@ -48,7 +48,7 @@ export function Todos() {
         body: JSON.stringify(newTodo),
       });
       if (!response.ok)
-        throw new Error(`Fetch error with status: ${response.ok}`);
+        throw new Error(`Fetch error with status: ${response.status}`);
       const addedTodos = await response.json();
       setTodos((todos) => [...todos, addedTodos]);
     } catch (error) {
@@ -71,7 +71,7 @@ export function Todos() {
         }),
       });
       if (!response.ok)
-        throw new Error(`Fetch error with status: ${response.ok}`);
+        throw new Error(`Fetch error with status: ${response.status}`);
       const modifiedTodos = await response.json();
       setTodos(
         todos.map((todo) => (todo.todoId === todoId ? modifiedTodos : todo))
