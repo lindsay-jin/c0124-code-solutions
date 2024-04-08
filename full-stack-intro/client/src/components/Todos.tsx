@@ -23,9 +23,9 @@ export function Todos() {
     async function loadTodos() {
       try {
         const response = await fetch('/api/todos');
-        if (!response.ok) throw new Error(`Fetch error ${response.ok}`);
+        if (!response.ok)
+          throw new Error(`Fetch error with status: ${response.ok}`);
         const result = await response.json();
-        console.log('result', result);
         setTodos(result);
       } catch (error) {
         setError(error);
@@ -38,18 +38,19 @@ export function Todos() {
 
   /* Implement addTodo to add a new todo. Hints are at the bottom of the file. */
   async function addTodo(newTodo: UnsavedTodo) {
+    console.log('newTodo', newTodo);
     try {
       const response = await fetch('/api/todos', {
         method: 'post',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/JSON',
         },
         body: JSON.stringify(newTodo),
       });
-      if (!response.ok) throw new Error(`Fetch error ${response.ok}`);
-      const result = await response.json();
-      console.log('result:', result);
-      setTodos((todos) => [...todos, result]);
+      if (!response.ok)
+        throw new Error(`Fetch error with status: ${response.ok}`);
+      const addedTodos = await response.json();
+      setTodos((todos) => [...todos, addedTodos]);
     } catch (error) {
       setError(error);
     }
@@ -57,20 +58,23 @@ export function Todos() {
 
   /* Implement toggleCompleted to toggle the completed state of a todo. Hints are at the bottom of the file. */
   async function toggleCompleted(todo: Todo) {
-    const { todoId } = todo;
     try {
+      const { todoId } = todo;
       const response = await fetch(`/api/todos/${todoId}`, {
         method: 'put',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/JSON',
         },
-        body: JSON.stringify({ ...todo, isCompleted: !todo.isCompleted }),
+        body: JSON.stringify({
+          task: todo.task,
+          isCompleted: !todo.isCompleted,
+        }),
       });
-      if (!response.ok) throw new Error(`Fetch error ${response.ok}`);
-      const result = await response.json();
-      console.log('result:', result);
-      setTodos((todos) =>
-        todos.map((todo) => (todo.todoId === todoId ? result : todo))
+      if (!response.ok)
+        throw new Error(`Fetch error with status: ${response.ok}`);
+      const modifiedTodos = await response.json();
+      setTodos(
+        todos.map((todo) => (todo.todoId === todoId ? modifiedTodos : todo))
       );
     } catch (error) {
       setError(error);
