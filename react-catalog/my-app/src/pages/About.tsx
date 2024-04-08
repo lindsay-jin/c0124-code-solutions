@@ -1,7 +1,7 @@
-export function About(){
+export function About() {
   return (
     <div>
-      <p>Happy Shopping!</p>
+      <h1>Happy Shopping!</h1>
     </div>
-  )
+  );
 }
