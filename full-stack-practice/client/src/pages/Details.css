@@ -1,0 +1,23 @@
+.link {
+  padding: 20px;
+  color: black;
+}
+
+.detailsContainer {
+  border: 1px solid lightgray;
+  padding: 0 10px 2rem;
+}
+
+button {
+  border: 1px solid rgb(211, 209, 209);
+  border-radius: 5px;
+}
+
+.middle {
+  display: flex;
+}
+
+.detailsImageContainer,
+.detailsInfoContainer {
+  flex: 50%;
+}
