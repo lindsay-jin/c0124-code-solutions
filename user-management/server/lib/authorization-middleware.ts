@@ -21,7 +21,7 @@ export function authMiddleware(
     req.user = payload as Request['user'];
     next();
   } catch (error) {
-    throw new ClientError(401, 'authentication required');
+    throw new ClientError(401, 'invalid token');
   }
 }
 

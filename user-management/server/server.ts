@@ -86,8 +86,8 @@ app.post('/api/auth/sign-in', async (req, res, next) => {
     if (!validPassword) throw new ClientError(401, 'invalid login');
 
     const payload = { userId: user.userId, username: user.username };
-    const jwtToken = jwt.sign(payload, hashKey);
-    res.status(200).json({ user: payload, jwtToken });
+    const token = jwt.sign(payload, hashKey);
+    res.status(200).json({ user: payload, token });
     /* TODO:
      * Delete the "Not implemented" error.
      * Query the database to find the "userId" and "hashedPassword" for the "username".
