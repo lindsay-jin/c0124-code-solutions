@@ -13,8 +13,20 @@ export function App() {
   const [cart, setCart] = useState<CartProduct[]>([]);
 
   function addToCart(item: Product): void {
-    const cartItem = { item, quantity: 1 };
-    setCart([...cart, cartItem]);
+    const existingItem = cart.find(
+      (addedItem) => addedItem.item.productId === item.productId
+    );
+    if (existingItem) {
+      const newCart = cart.map((cartItem) =>
+        cartItem.item.productId === item.productId
+          ? { ...cartItem, quantity: cartItem.quantity + 1 }
+          : cartItem
+      ); // newCart is the updated cart with updated quantity
+      setCart(newCart);
+    } else {
+      const cartItem = { item, quantity: 1 };
+      setCart([...cart, cartItem]);
+    }
   }
 
   useEffect(() => {

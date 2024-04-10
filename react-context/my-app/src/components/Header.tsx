@@ -6,9 +6,14 @@ import { CartContext } from './CartContext';
 export function Header() {
   const { cart } = useContext(CartContext);
   let quantity = 0;
-  cart.forEach((cp) => {
-    quantity += cp.quantity;
-  });
+  for (let i = 0; i < cart.length; i++) {
+    quantity += cart[i].quantity;
+  } // i represents the number of items in the cart, each item is a different item, each i can have different quantity
+
+  // cart.forEach((cp) => {
+  //   quantity += cp.quantity;
+  // });
+
   return (
     <div>
       <nav className="flex px-4 text-white bg-gray-900">
