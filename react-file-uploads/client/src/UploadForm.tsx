@@ -60,17 +60,16 @@ export function UploadForm() {
           accept=".png, .jpg, .jpeg, .gif"
         />
         <button type="submit">Upload</button>
-
-        {imageFile && (
-          <div>
-            <img
-              style={{ width: '300px' }}
-              src={imageFile.url}
-              alt={imageFile.caption}
-            />
-          </div>
-        )}
       </form>
+      {imageFile && (
+        <div>
+          <img
+            style={{ width: '300px' }}
+            src={imageFile.url}
+            alt={imageFile.caption}
+          />
+        </div>
+      )}
     </div>
   );
 }
