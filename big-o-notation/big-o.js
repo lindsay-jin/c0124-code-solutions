@@ -23,7 +23,7 @@ function uniqueQuadratic(words) {
   for (
     let i = 0; // 1 * 1 = O(1)
     i < words.length; // 2 * n = O(n)
-    i++ // 2 * 2 = O(n)
+    i++ // 2 * n = O(n)
   ) {
     const word = words[i]; // 2 * n = O(n)
     let isUnique = true; // 1 * n = O(n)
@@ -39,9 +39,9 @@ function uniqueQuadratic(words) {
       }
     }
     if (isUnique) {
-      // 1 * 1 = O(1)
+      // 1 * n = O(n)
       unique[unique.length] = word; // 3 * n = O(n)
     }
   }
-  return unique; // 1 * 1 = O()
+  return unique; // 1 * 1 = O(1)
 } // Big O Notation for uniqueQuadratic: O(n^2)
