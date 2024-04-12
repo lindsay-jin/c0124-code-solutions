@@ -15,5 +15,12 @@ export function takeTop<T>(stack: Stack<T>): T | undefined {
 }
 
 export function isEmpty<T>(stack: Stack<T>): boolean {
-  return stack.peek() === undefined;
+  const element = stack.peek();
+  if (element === undefined) {
+    return true;
+  } else {
+    return false;
+  }
+
+  // return stack.peek() === undefined;
 }
